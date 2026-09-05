@@ -1,0 +1,152 @@
+trip:
+  title: "东京与镰仓四日手册"
+  subtitle: "春日散步 · 示例行程"
+  start_date: "2027-04-10"
+  end_date: "2027-04-13"
+  timezone: "Asia/Tokyo"
+  travelers: 2
+  currency: "JPY"
+  hero:
+    image_url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/TokyoSkylineFromAfar.jpg/960px-TokyoSkylineFromAfar.jpg"
+    alt: "从远处眺望东京天际线"
+    credit: "TokyoSkylineFromAfar · Bryan MacKinnon · Public Domain · Wikimedia Commons"
+    credit_url: "https://commons.wikimedia.org/wiki/File:TokyoSkylineFromAfar.jpg"
+
+review:
+  status: approved
+  unresolved: []
+  approved_at: "2026-09-05"
+
+highlights:
+  - label: "旅行日期"
+    value: "2027.04.10—04.13"
+  - label: "城市"
+    value: "东京 · 镰仓"
+  - label: "人数"
+    value: "2 人"
+
+bookings:
+  - type: flight
+    icon: "plane"
+    title: "示例航空 XY123"
+    status: confirmed
+    detail: "上海 08:30 → 东京 12:20"
+    note: "示例信息，请替换为自己的航班"
+  - type: hotel
+    icon: "hotel"
+    title: "示例酒店 银座"
+    status: confirmed
+    detail: "4月10日入住 · 4月13日退房"
+    note: "入住 15:00 后"
+  - type: restaurant
+    icon: "food"
+    title: "示例餐厅"
+    status: confirmed
+    detail: "4月11日 19:00 · 2人"
+    note: "预约已确认"
+
+days:
+  - date: "2027-04-10"
+    title: "抵达东京"
+    area: "羽田 · 银座"
+    summary: "抵达、入住与夜间散步"
+    events:
+      - time: "12:20"
+        duration_minutes: 70
+        title: "抵达羽田机场"
+        kind: transport
+        detail: "入境、领取行李与交通卡"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Haneda+Airport"
+      - time: "15:00"
+        duration_minutes: 30
+        title: "酒店办理入住"
+        kind: hotel
+        detail: "寄存行李后稍作休息"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Ginza+Tokyo"
+      - time: "17:00"
+        duration_minutes: 120
+        title: "银座散步"
+        kind: walk
+        detail: "商店街与晚餐自由安排"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Ginza+Tokyo"
+  - date: "2027-04-11"
+    title: "东京经典路线"
+    area: "浅草 · 上野"
+    summary: "寺社、街区与预约晚餐"
+    events:
+      - time: "09:00"
+        duration_minutes: 120
+        title: "浅草寺与仲见世"
+        kind: sight
+        detail: "建议避开正午人流"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Sensoji+Tokyo"
+      - time: "12:00"
+        duration_minutes: 90
+        title: "上野午餐"
+        kind: food
+        detail: "现场选择"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Ueno+Tokyo"
+      - time: "14:00"
+        duration_minutes: 150
+        title: "博物馆与公园"
+        kind: culture
+        detail: "根据开放时间选择馆舍"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Ueno+Park"
+      - time: "19:00"
+        duration_minutes: 120
+        title: "预约晚餐"
+        kind: food
+        detail: "请提前10分钟抵达"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Tokyo"
+  - date: "2027-04-12"
+    title: "镰仓一日"
+    area: "北镰仓 · 长谷"
+    summary: "古寺、海岸与江之电"
+    events:
+      - time: "08:30"
+        duration_minutes: 70
+        title: "东京出发"
+        kind: transport
+        detail: "乘JR前往北镰仓"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Kita-Kamakura+Station"
+      - time: "10:00"
+        duration_minutes: 120
+        title: "北镰仓散步"
+        kind: sight
+        detail: "寺院与小径"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Kita-Kamakura"
+      - time: "13:30"
+        duration_minutes: 150
+        title: "长谷与海边"
+        kind: sight
+        detail: "搭乘江之电移动"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Hase+Kamakura"
+      - time: "17:30"
+        duration_minutes: 80
+        title: "返回东京"
+        kind: transport
+        detail: "晚餐自由安排"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Kamakura+Station"
+  - date: "2027-04-13"
+    title: "返程日"
+    area: "东京 · 羽田"
+    summary: "退房、采购与返程"
+    events:
+      - time: "10:00"
+        duration_minutes: 20
+        title: "退房"
+        kind: hotel
+        detail: "确认随身物品"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Ginza+Tokyo"
+      - time: "11:00"
+        duration_minutes: 120
+        title: "最后采购"
+        kind: shopping
+        detail: "预留行李整理时间"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Tokyo+Station"
+      - time: "14:00"
+        duration_minutes: 60
+        title: "前往羽田机场"
+        kind: transport
+        detail: "国际航班建议提前抵达"
+        map_url: "https://www.google.com/maps/search/?api=1&query=Haneda+Airport"

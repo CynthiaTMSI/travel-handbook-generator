@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123c69">
+    <meta name="description" content="{{TRIP_DESCRIPTION}}">
+    <title>{{TRIP_TITLE}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="返回旅行手册顶部">
+        <span class="brand-mark">TH</span>
+        <span>TRAVEL HANDBOOK</span>
+      </a>
+      <nav aria-label="页面导航">
+        <a href="#overview">总览</a>
+        <a href="#days">每日行程</a>
+        <a href="#bookings">预订</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="trip-title">
+        <img id="hero-image" class="hero-image" alt="">
+        <div class="hero-scrim"></div>
+        <div class="hero-copy">
+          <p class="eyebrow" id="trip-dates"></p>
+          <h1 id="trip-title">{{TRIP_TITLE}}</h1>
+          <p class="hero-subtitle" id="trip-subtitle"></p>
+          <div class="countdown" aria-live="polite">
+            <span class="countdown-label">距离出发</span>
+            <strong id="countdown-value">正在计算…</strong>
+          </div>
+        </div>
+        <a id="hero-credit" class="photo-credit" target="_blank" rel="noreferrer"></a>
+      </section>
+
+      <section class="next-panel" aria-labelledby="next-title">
+        <div>
+          <p class="section-kicker">此刻关注 · NEXT</p>
+          <h2 id="next-title">正在读取下一项行程</h2>
+          <p id="next-detail" class="next-detail"></p>
+        </div>
+        <div id="next-time" class="next-time"></div>
+      </section>
+
+      <section id="overview" class="section" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="section-kicker">TRIP AT A GLANCE</p>
+          <h2 id="overview-title">旅行总览</h2>
+        </div>
+        <div id="highlights" class="highlights"></div>
+        <div id="day-tabs" class="day-tabs" aria-label="快速跳转到每日行程"></div>
+      </section>
+
+      <section id="days" class="section" aria-labelledby="days-title">
+        <div class="section-heading">
+          <p class="section-kicker">DAILY PLAN</p>
+          <h2 id="days-title">每日行程</h2>
+        </div>
+        <div id="days-list" class="days-list"></div>
+      </section>
+
+      <section id="bookings" class="section" aria-labelledby="bookings-title">
+        <div class="section-heading">
+          <p class="section-kicker">RESERVATIONS</p>
+          <h2 id="bookings-title">预订信息</h2>
+        </div>
+        <div id="booking-list" class="booking-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>仅展示出行所需信息。订单号、二维码、证件及付款信息请勿发布。</p>
+      <p id="generated-note"></p>
+    </footer>
+
+    <noscript>请启用 JavaScript 以查看旅行手册。</noscript>
+  </body>
+</html>

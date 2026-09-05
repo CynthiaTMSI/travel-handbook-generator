@@ -1,0 +1,136 @@
+:root {
+  --ink: #102a43;
+  --muted: #5c6f82;
+  --paper: #f6f8fb;
+  --card: #ffffff;
+  --navy: #123c69;
+  --blue: #2b6ca3;
+  --sky: #d8ecf7;
+  --gold: #e7b65a;
+  --line: #d9e2ec;
+  --shadow: 0 18px 45px rgba(18, 60, 105, 0.12);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Noto Sans SC", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: inherit; }
+.skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 99; background: white; padding: .7rem 1rem; border-radius: 8px; }
+.skip-link:focus { top: 1rem; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 68px;
+  padding: .65rem clamp(1rem, 4vw, 4rem);
+  color: white;
+  background: rgba(13, 43, 73, .94);
+  backdrop-filter: blur(14px);
+}
+.brand { display: inline-flex; align-items: center; gap: .7rem; font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-decoration: none; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; font-family: "Playfair Display", serif; letter-spacing: 0; }
+nav { display: flex; gap: clamp(.7rem, 2.5vw, 1.8rem); }
+nav a { color: rgba(255,255,255,.82); font-size: .9rem; text-decoration: none; }
+nav a:hover, nav a:focus-visible { color: white; }
+
+.hero { position: relative; min-height: min(72vh, 700px); display: grid; align-items: end; overflow: hidden; background: var(--navy); color: white; }
+.hero-image, .hero-scrim { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-image { object-fit: cover; }
+.hero-scrim { background: linear-gradient(90deg, rgba(6,29,52,.9) 0%, rgba(9,44,76,.58) 48%, rgba(9,44,76,.18) 100%), linear-gradient(0deg, rgba(5,25,43,.62), transparent 55%); }
+.hero-copy { position: relative; z-index: 2; width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: clamp(5rem, 13vw, 9rem) 0 clamp(4rem, 8vw, 6rem); }
+.eyebrow, .section-kicker { margin: 0 0 .45rem; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.hero h1 { max-width: 850px; margin: 0; font-family: "Playfair Display", "Noto Sans SC", serif; font-size: clamp(2.7rem, 8vw, 6rem); line-height: 1.05; letter-spacing: -.03em; }
+.hero-subtitle { margin: 1rem 0 2rem; font-size: clamp(1rem, 2.3vw, 1.35rem); color: rgba(255,255,255,.86); }
+.countdown { display: inline-flex; align-items: baseline; gap: .8rem; padding: .8rem 1rem; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(255,255,255,.1); }
+.countdown-label { font-size: .82rem; color: rgba(255,255,255,.76); }
+.countdown strong { font-size: 1.15rem; }
+.photo-credit { position: absolute; z-index: 2; right: 1rem; bottom: .7rem; max-width: 60%; color: rgba(255,255,255,.68); font-size: .7rem; text-align: right; text-decoration: none; }
+
+.next-panel, .section { width: min(1160px, calc(100% - 2rem)); margin-inline: auto; }
+.next-panel { position: relative; z-index: 4; display: flex; justify-content: space-between; gap: 2rem; margin-top: -2rem; padding: clamp(1.4rem, 4vw, 2.2rem); border-top: 4px solid var(--gold); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.next-panel h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.25; }
+.next-detail { margin: .45rem 0 0; color: var(--muted); }
+.next-time { flex: 0 0 auto; align-self: center; color: var(--blue); font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 5vw, 3.3rem); font-weight: 700; }
+
+.section { padding: clamp(4rem, 8vw, 7rem) 0 0; }
+.section-heading { margin-bottom: 1.6rem; }
+.section-heading h2 { margin: 0; font-family: "Playfair Display", "Noto Sans SC", serif; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; }
+.section-kicker { color: var(--blue); }
+.highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.highlight-card { padding: 1.4rem; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+.highlight-card span { display: block; color: var(--muted); font-size: .8rem; }
+.highlight-card strong { display: block; margin-top: .25rem; font-size: 1.15rem; }
+.day-tabs { display: flex; gap: .7rem; padding-top: 1.2rem; overflow-x: auto; scrollbar-width: thin; }
+.day-tab { flex: 0 0 auto; padding: .65rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--navy); font-size: .9rem; text-decoration: none; }
+.day-tab:hover, .day-tab:focus-visible { border-color: var(--blue); background: var(--sky); }
+
+.days-list { display: grid; gap: 1.4rem; }
+.day-card { display: grid; grid-template-columns: 230px 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: 0 10px 30px rgba(18,60,105,.07); scroll-margin-top: 90px; }
+.day-head { padding: 1.6rem; color: white; background: var(--navy); }
+.day-number { display: block; margin-bottom: 1.1rem; color: #bcd8eb; font-size: .78rem; font-weight: 700; letter-spacing: .14em; }
+.day-date { display: block; font-family: "Playfair Display", serif; font-size: 2rem; font-weight: 700; }
+.day-head h3 { margin: .45rem 0 .25rem; font-size: 1.2rem; }
+.day-area, .day-summary { margin: 0; color: rgba(255,255,255,.72); font-size: .88rem; }
+.day-summary { margin-top: 1rem; }
+.timeline { margin: 0; padding: 1.4rem 1.6rem; list-style: none; }
+.event { position: relative; display: grid; grid-template-columns: 74px 1fr auto; gap: 1rem; padding: .65rem 0 1.5rem; }
+.event:not(:last-child)::before { content: ""; position: absolute; left: 83px; top: 2.1rem; bottom: -.2rem; width: 1px; background: var(--line); }
+.event-time { font-weight: 700; color: var(--blue); }
+.event-copy { position: relative; padding-left: 1.2rem; }
+.event-copy::before { content: ""; position: absolute; left: -.03rem; top: .5rem; width: 9px; height: 9px; border: 3px solid white; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 1px var(--line); }
+.event-copy h4 { margin: 0; font-size: 1rem; }
+.event-copy p { margin: .2rem 0 0; color: var(--muted); font-size: .88rem; }
+.map-link { align-self: start; padding: .42rem .7rem; border-radius: 999px; background: var(--sky); color: var(--navy); font-size: .78rem; font-weight: 600; text-decoration: none; }
+.map-link:hover, .map-link:focus-visible { background: #bedfeb; }
+
+.booking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.booking-card { padding: 1.4rem; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+.booking-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.booking-type { color: var(--blue); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+.status { padding: .25rem .5rem; border-radius: 999px; background: #e6f6ed; color: #17673a; font-size: .72rem; font-weight: 700; }
+.booking-card h3 { margin: .85rem 0 .3rem; font-size: 1.05rem; }
+.booking-card p { margin: .2rem 0; color: var(--muted); font-size: .88rem; }
+footer { margin-top: 6rem; padding: 2.6rem 1rem; color: rgba(255,255,255,.72); background: #0b2c4b; text-align: center; font-size: .82rem; }
+footer p { margin: .3rem; }
+noscript { display: block; padding: 1rem; background: #fff2cc; text-align: center; }
+
+@media (max-width: 760px) {
+  .topbar { min-height: 60px; }
+  .brand > span:last-child { display: none; }
+  nav a { font-size: .82rem; }
+  .hero { min-height: 620px; }
+  .next-panel { display: block; }
+  .next-time { margin-top: 1rem; }
+  .highlights, .booking-grid { grid-template-columns: 1fr; }
+  .day-card { grid-template-columns: 1fr; }
+  .day-head { padding: 1.3rem 1.4rem; }
+  .day-number { margin-bottom: .4rem; }
+  .timeline { padding: 1.2rem; }
+  .event { grid-template-columns: 58px 1fr; gap: .7rem; }
+  .event:not(:last-child)::before { left: 64px; }
+  .event-copy { padding-left: 1rem; }
+  .map-link { grid-column: 2; justify-self: start; }
+}
+
+@media print {
+  body { background: white; color: black; }
+  .topbar, .countdown, .next-panel, .photo-credit, .day-tabs, .map-link { display: none !important; }
+  .hero { min-height: 260px; break-after: page; }
+  .hero-copy { padding: 5rem 1rem 2rem; }
+  .section { width: 100%; padding-top: 1.5rem; }
+  .day-card { break-inside: avoid; box-shadow: none; }
+  .booking-card, .highlight-card { break-inside: avoid; }
+  footer { color: black; background: white; }
+}
